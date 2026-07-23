@@ -5,11 +5,10 @@ services:
     environment:
       POSTGRES_USER: ${POSTGRES_USER}
       POSTGRES_PASSWORD: ${POSTGRES_PASSWORD}
-      PGDATA: /var/lib/postgresql
     ports:
       - "5432:5432"
     volumes:
-      - postgres:/var/lib/postgressql
+      - postgres:/var/lib/postgresql
     networks:
       - ms-net
     restart: unless-stopped
