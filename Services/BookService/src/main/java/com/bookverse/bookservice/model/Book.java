@@ -1,28 +1,21 @@
 package com.bookverse.bookservice.model;
 
-import jakarta.persistence.Entity;
-import jakarta.persistence.GeneratedValue;
-import jakarta.persistence.GenerationType;
-import jakarta.persistence.Id;
-import jakarta.validation.Valid;
+import jakarta.persistence.*;
 import lombok.AllArgsConstructor;
 import lombok.Builder;
 import lombok.Data;
 import lombok.NoArgsConstructor;
-import org.springframework.validation.annotation.Validated;
-
 import java.util.Date;
 
 @AllArgsConstructor
 @NoArgsConstructor
 @Data
 @Builder
-@Validated
 @Entity
 public class Book {
 
     @Id
-    @GeneratedValue
+    @GeneratedValue(strategy = GenerationType.SEQUENCE, generator = "book_seq")
     private Integer id;
 
     private String title;
