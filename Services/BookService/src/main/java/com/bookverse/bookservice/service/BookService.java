@@ -2,7 +2,6 @@ package com.bookverse.bookservice.service;
 
 import com.bookverse.bookservice.DTO.BookResponseDTO;
 import com.bookverse.bookservice.mapper.BookMapper;
-import com.bookverse.bookservice.model.Book;
 import com.bookverse.bookservice.repository.BookRepository;
 import lombok.RequiredArgsConstructor;
 import org.springframework.stereotype.Service;
