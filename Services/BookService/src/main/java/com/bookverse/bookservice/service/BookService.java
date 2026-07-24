@@ -23,4 +23,6 @@ public class BookService {
                 ;
     }
 
+    //TODO: Add service methods for Rest calls from controller
+
 }

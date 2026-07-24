@@ -22,4 +22,7 @@ public class BookMapper {
                 book.getRatingCount()
         );
     }
+
+    //TODO: Add BookRequestDTO to Book mapper
+
 }

@@ -22,4 +22,6 @@ public class BookController {
         return ResponseEntity.ok(bookService.findAllBooks());
     }
 
+    //TODO: Add POST PUT DELETE(admin only) Mappings
+
 }
