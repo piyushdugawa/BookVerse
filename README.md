@@ -67,6 +67,7 @@ Ensure PostgreSQL credentials(provided a .env.example - rename it to .env and pu
 ## API
 BookService exposes REST endpoints under /api/v1/books
 - GET /api/v1/books — returns list of books (BookResponseDTO)
+- GET /api/v1/books/{id} — returns book with id (BookResponseDTO)
 
 TODO: Add POST, PUT, DELETE endpoints and admin authorization (not yet implemented).
 

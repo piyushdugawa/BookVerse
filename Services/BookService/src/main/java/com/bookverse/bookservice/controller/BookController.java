@@ -28,6 +28,6 @@ public class BookController {
         return ResponseEntity.ok(bookService.findBookById(book_id));
     }
 
-    //TODO: POST PUT DELETE(admin only) Mappings
+    //TODO: POST, PUT, DELETE(admin only) Mappings
 
 }
