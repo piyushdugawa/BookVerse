@@ -5,6 +5,7 @@ import com.bookverse.bookservice.service.BookService;
 import lombok.RequiredArgsConstructor;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.GetMapping;
+import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
 
@@ -22,6 +23,11 @@ public class BookController {
         return ResponseEntity.ok(bookService.findAllBooks());
     }
 
-    //TODO: Add POST PUT DELETE(admin only) Mappings
+    @GetMapping("/{book_id}")
+    public ResponseEntity<BookResponseDTO> findBookById(@PathVariable int book_id){
+        return ResponseEntity.ok(bookService.findBookById(book_id));
+    }
+
+    //TODO: POST PUT DELETE(admin only) Mappings
 
 }

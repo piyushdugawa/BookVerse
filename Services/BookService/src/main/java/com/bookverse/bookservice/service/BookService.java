@@ -23,6 +23,10 @@ public class BookService {
                 ;
     }
 
+    public  BookResponseDTO findBookById(int bookId){
+        return bookMapper.toBookResponseDTO(bookRepository.findById(bookId).orElse(null));
+    }
+
     //TODO: Add service methods for Rest calls from controller
 
 }
