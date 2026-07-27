@@ -9,8 +9,6 @@ import org.springframework.stereotype.Service;
 
 import java.util.List;
 
-import static java.lang.String.*;
-
 @Service
 @RequiredArgsConstructor
 public class BookService {

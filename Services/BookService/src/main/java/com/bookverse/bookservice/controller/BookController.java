@@ -3,6 +3,7 @@ package com.bookverse.bookservice.controller;
 import com.bookverse.bookservice.DTO.BookResponseDTO;
 import com.bookverse.bookservice.service.BookService;
 import lombok.RequiredArgsConstructor;
+import lombok.extern.slf4j.Slf4j;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.PathVariable;
@@ -11,6 +12,7 @@ import org.springframework.web.bind.annotation.RestController;
 
 import java.util.List;
 
+@Slf4j
 @RestController
 @RequestMapping("/api/v1/books")
 @RequiredArgsConstructor
@@ -25,7 +27,9 @@ public class BookController {
 
     @GetMapping("/{book_id}")
     public ResponseEntity<BookResponseDTO> findBookById(@PathVariable int book_id){
-        return ResponseEntity.ok(bookService.findBookById(book_id));
+        BookResponseDTO bookResponseDTO = bookService.findBookById(book_id);
+        log.info("Book fetched with id: {}", book_id);
+        return ResponseEntity.ok(bookResponseDTO);
     }
 
     //TODO: POST, PUT, DELETE(admin only) Mappings
