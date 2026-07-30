@@ -16,5 +16,9 @@ spring:
     baseline-version: 0
     user: ${spring.datasource.username}
     password: ${spring.datasource.password}
+  security:
+    user:
+      name: ${TEMP_AUTH_USERNAME}
+      password: ${TEMP_AUTH_PASSWORD}
 server:
   port: 8051
