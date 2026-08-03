@@ -42,6 +42,8 @@ build/
 # Logs
 *.log
 
+docs
+
 # OS
 .DS_Store
 Thumbs.db
